@@ -1,0 +1,154 @@
+@import './reset';
+@import './config';
+
+@mixin mobile{
+    @media screen and (min-width:200px) and (max-width:900px){
+        @content;
+    }
+}
+@mixin flex($space,$direction){
+    display: flex;
+    align-items: center;
+    justify-content: $space;
+    flex-direction: $direction;
+}
+@function font-weight($fonts, $key){
+    @return map-get($fonts, $key);
+}
+main{
+    margin: 0;
+    padding: 4em;
+    height: 100vh;
+    @include flex(space-between,row);
+
+    @include mobile{
+        @include flex(flex-start, column);
+        height: fit-content;
+        padding: 1em;
+    }
+    
+    .main_left{
+        height: 85vh;
+        padding-left: 2em;
+        @include mobile{
+            margin-bottom: 6em;
+        }
+
+        .top_title{
+            margin-bottom: 1em;
+
+            h1{
+                margin-bottom: 1em;
+                font-weight: font-weight($fonts, bold );
+                font-size: 3em;
+            }
+
+            h2{
+                font-weight: 800;
+                font-size: 3em;
+                text-transform: capitalize;
+                width: 60%;
+                @include mobile{
+                    font-size: 2em;
+                    text-transform: capitalize;
+                    width: 80%;
+                }
+            }
+
+            p{
+                margin: .5em 0;
+                font-size: 2em;
+                text-transform: capitalize;
+                font-weight: font-weight($fonts, bold );
+            }
+        }
+        .content{
+            p{
+                line-height: 2;
+                color: $secondary-color;
+                width: 90%;
+            }
+
+            .btns{
+                margin: 1em 0;
+
+                .btn{
+                    border-radius: 2em;
+                    padding: 1.2em 2.5em;
+                    cursor: pointer;
+                }
+
+                .first-btn{
+                    border: none;
+                    color: white;
+                    background: $secondary-color;
+                    transition: all ease .5s;
+                    &:hover{
+                        background: white;
+                        color: $secondary-color;
+                    }
+                }
+
+                .second-btn{
+                    border: 2px solid #f1f1f1;
+                    color: $secondary-color;
+                    background: white;
+                    margin-left: 1em;
+                    transition: all ease .5s;
+
+                    &:hover{
+                        background: $secondary-color;
+                        color: white;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .timestamp{
+            h5{
+                margin-bottom: 1em;
+            }
+
+            h5:last-of-type{
+                color: $secondary-color;
+                margin: .5em 0;
+            }
+            a{
+                .fa-arrow-right{
+                    margin-left: 4em;
+                    color: $secondary-color;
+                }
+            }
+           
+        }
+    }
+    .main_right{
+        height: 85vh;
+        position: relative;
+        @include mobile{
+            margin-top: 3em;
+        }
+
+        .fa-shopping-cart{
+            font-size: 2em;
+            background: black;
+            color: white;
+            padding: .5em;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top-left-radius: .5em;
+            border-top-right-radius: .3em;
+            border-bottom-left-radius: .6em;
+            border-bottom-right-radius: 1.5em;
+        }
+
+        img{
+            height: 90%;
+            width: fit-content;
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

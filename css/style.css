@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+  margin: 0;
+  padding: 4em;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: fit-content;
+    padding: 1em;
+  }
+}
+
+main .main_left {
+  height: 85vh;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  main .main_left {
+    margin-bottom: 6em;
+  }
+}
+
+main .main_left .top_title {
+  margin-bottom: 1em;
+}
+
+main .main_left .top_title h1 {
+  margin-bottom: 1em;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+main .main_left .top_title h2 {
+  font-weight: 800;
+  font-size: 3em;
+  text-transform: capitalize;
+  width: 60%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  main .main_left .top_title h2 {
+    font-size: 2em;
+    text-transform: capitalize;
+    width: 80%;
+  }
+}
+
+main .main_left .top_title p {
+  margin: .5em 0;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+main .main_left .content p {
+  line-height: 2;
+  color: #d85a5a;
+  width: 90%;
+}
+
+main .main_left .content .btns {
+  margin: 1em 0;
+}
+
+main .main_left .content .btns .btn {
+  border-radius: 2em;
+  padding: 1.2em 2.5em;
+  cursor: pointer;
+}
+
+main .main_left .content .btns .first-btn {
+  border: none;
+  color: white;
+  background: #d85a5a;
+  transition: all ease .5s;
+}
+
+main .main_left .content .btns .first-btn:hover {
+  background: white;
+  color: #d85a5a;
+}
+
+main .main_left .content .btns .second-btn {
+  border: 2px solid #f1f1f1;
+  color: #d85a5a;
+  background: white;
+  margin-left: 1em;
+  transition: all ease .5s;
+}
+
+main .main_left .content .btns .second-btn:hover {
+  background: #d85a5a;
+  color: white;
+  border: none;
+}
+
+main .main_left .timestamp h5 {
+  margin-bottom: 1em;
+}
+
+main .main_left .timestamp h5:last-of-type {
+  color: #d85a5a;
+  margin: .5em 0;
+}
+
+main .main_left .timestamp a .fa-arrow-right {
+  margin-left: 4em;
+  color: #d85a5a;
+}
+
+main .main_right {
+  height: 85vh;
+  position: relative;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  main .main_right {
+    margin-top: 3em;
+  }
+}
+
+main .main_right .fa-shopping-cart {
+  font-size: 2em;
+  background: black;
+  color: white;
+  padding: .5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .3em;
+  border-bottom-left-radius: .6em;
+  border-bottom-right-radius: 1.5em;
+}
+
+main .main_right img {
+  height: 90%;
+  width: fit-content;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+  main .main_right img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
